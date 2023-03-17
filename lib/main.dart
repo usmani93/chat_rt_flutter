@@ -61,6 +61,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _myButtonPressed() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -102,6 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            TextButton(
+                onPressed: _myButtonPressed, child: const Text('Click Me!')),
           ],
         ),
       ),
